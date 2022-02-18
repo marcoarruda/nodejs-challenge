@@ -41,7 +41,9 @@ Final Position: 2 3 S
 
 We expect that you as a developer implement the logics that will allow the Rover to explore the mars plateau.
 
-If you think that makes sense you can do any changes on the project structure to improve it or use any kind of node libraries that mayy help the implemtation.
+If you think that makes sense you can do any changes on the project structure to improve it or use any kind of node libraries that may help the implemtation.
+
+We expect that you deliver the project in a new repository and send the link to cassiano@voyagerportal.com with the subject Super Day Test.
 
 ## Instructions to run the project
 
