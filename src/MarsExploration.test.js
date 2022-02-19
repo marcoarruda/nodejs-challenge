@@ -35,6 +35,7 @@ test('Move Rover on Plateau - Scenario 1', () => {
 
 test('Print Rover Position', () => {
   const exploration = new MarsExploration();
+  const rover = exploration.landRover(1, 'Eagle', '1 3 N'); // land rover before trying to move it
   const message = exploration.getRoverPositionMessage(1);
-  expect(message).toBe('Rover "Eagle" is now at positioin 1 3 N');
+  expect(message).toBe('Rover "Eagle" is now at position 1 3 N');
 });
