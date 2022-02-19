@@ -28,7 +28,7 @@ test('Move Rover on Plateau', () => {
   expect(position).toStrictEqual({
     newPositionX: 1,
     newPositionY: 3,
-    newOrientation: 'N' 
+    newOrientation: 'N'
   });
 });
 
