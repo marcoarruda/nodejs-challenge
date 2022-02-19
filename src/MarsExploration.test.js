@@ -17,7 +17,7 @@ test('Land Rover on Mars', () => {
     id: 1,
     name: 'Eagle',
     positionX: 1,
-    posiitionY: 2,
+    positionY: 2,
     orientation: 'N'
   });
 });
