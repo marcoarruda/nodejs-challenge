@@ -59,13 +59,49 @@ describe('Testing out-of-boundaries movements', () => {
   test('Heading to north', () => {
     const exploration = new MarsExploration();
     exploration.definePlateauSize('plateau', '10,10')
-    const rover = exploration.landRover(1, 'Eagle', '5 10 N');
+    const [originalX, originalY, originalOrientation] = [5, 10, 'N']
+    const rover = exploration.landRover(1, 'Eagle', `${originalX} ${originalY} ${originalOrientation}`);
     const position = exploration.moveRover(1, 'M');
-    console.log(position)
     expect(position).toStrictEqual({
-      newPositionX: 5,
-      newPositionY: 10,
-      newOrientation: 'N'
+      newPositionX: originalX,
+      newPositionY: originalY,
+      newOrientation: originalOrientation
+    });
+  });
+  test('Heading to east', () => {
+    const exploration = new MarsExploration();
+    exploration.definePlateauSize('plateau', '10,10')
+    const [originalX, originalY, originalOrientation] = [10, 5, 'E']
+    const rover = exploration.landRover(1, 'Eagle', `${originalX} ${originalY} ${originalOrientation}`);
+    const position = exploration.moveRover(1, 'M');
+    expect(position).toStrictEqual({
+      newPositionX: originalX,
+      newPositionY: originalY,
+      newOrientation: originalOrientation
+    });
+  });
+  test('Heading to south', () => {
+    const exploration = new MarsExploration();
+    exploration.definePlateauSize('plateau', '10,10')
+    const [originalX, originalY, originalOrientation] = [5, 0, 'S']
+    const rover = exploration.landRover(1, 'Eagle', `${originalX} ${originalY} ${originalOrientation}`);
+    const position = exploration.moveRover(1, 'M');
+    expect(position).toStrictEqual({
+      newPositionX: originalX,
+      newPositionY: originalY,
+      newOrientation: originalOrientation
+    });
+  });
+  test('Heading to west', () => {
+    const exploration = new MarsExploration();
+    exploration.definePlateauSize('plateau', '10,10')
+    const [originalX, originalY, originalOrientation] = [0, 5, 'W']
+    const rover = exploration.landRover(1, 'Eagle', `${originalX} ${originalY} ${originalOrientation}`);
+    const position = exploration.moveRover(1, 'M');
+    expect(position).toStrictEqual({
+      newPositionX: originalX,
+      newPositionY: originalY,
+      newOrientation: originalOrientation
     });
   });
 })

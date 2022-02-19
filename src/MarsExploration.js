@@ -50,12 +50,11 @@ class MarsExploration {
           break
         case 'M':
           const newPositionX = rover.positionX + goStraightAheadX[rover.orientation]
-          if (newPositionX <= this.plateau.upperX || newPositionX >= 0) {
+          if (newPositionX <= this.plateau.upperX && newPositionX >= 0) {
             rover.positionX = newPositionX
           }
           const newPositionY = rover.positionY + goStraightAheadY[rover.orientation]
-          console.log(this.plateau)
-          if (newPositionY <= this.plateau.upperY || newPositionY >= 0) {
+          if (newPositionY <= this.plateau.upperY && newPositionY >= 0) {
             rover.positionY = newPositionY
           }
           break
