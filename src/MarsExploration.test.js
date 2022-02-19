@@ -1,6 +1,6 @@
 const MarsExploration = require('./MarsExploration');
 
-xdescribe('Fundamental MarsExploration class methods', () => {
+describe('Fundamental MarsExploration class methods', () => {
   test('Define Mars Plateou Size', () => {
     const exploration = new MarsExploration();
     const plateau = exploration.definePlateauSize('North Plateau', '10,10');
