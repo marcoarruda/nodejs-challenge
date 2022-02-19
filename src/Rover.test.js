@@ -1,6 +1,6 @@
 const MarsExploration = require('./MarsExploration');
 
-describe('Turn left', () => {
+xdescribe('Turn left', () => {
   const exploration = new MarsExploration();
   exploration.definePlateauSize('whatever', '10,10')
 
@@ -26,7 +26,7 @@ describe('Turn left', () => {
   })
 });
 
-describe('Turn right', () => {
+xdescribe('Turn right', () => {
 
   const exploration = new MarsExploration();
   exploration.definePlateauSize('whatever', '10,10')
@@ -53,7 +53,7 @@ describe('Turn right', () => {
   })
 });
 
-describe('Go forward', () => {
+xdescribe('Go forward', () => {
   const exploration = new MarsExploration();
   exploration.definePlateauSize('whatever', '10,10')
 

@@ -54,6 +54,7 @@ class MarsExploration {
             rover.positionX = newPositionX
           }
           const newPositionY = rover.positionY + goStraightAheadY[rover.orientation]
+          console.log(this.plateau)
           if (newPositionY <= this.plateau.upperY || newPositionY >= 0) {
             rover.positionY = newPositionY
           }
