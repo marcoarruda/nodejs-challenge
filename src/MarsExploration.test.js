@@ -22,7 +22,7 @@ test('Land Rover on Mars', () => {
   });
 });
 
-xtest('Move Rover on Plateau - Scenario 1', () => {
+test('Move Rover on Plateau - Scenario 1', () => {
   const exploration = new MarsExploration();
   const rover = exploration.landRover(1, 'Eagle', '1 2 N'); // land rover before trying to move it
   const position = exploration.moveRover(1, 'LMLMLMLMM'); // we now have something to move
@@ -33,7 +33,7 @@ xtest('Move Rover on Plateau - Scenario 1', () => {
   });
 });
 
-xtest('Print Rover Position', () => {
+test('Print Rover Position', () => {
   const exploration = new MarsExploration();
   const message = exploration.getRoverPositionMessage(1);
   expect(message).toBe('Rover "Eagle" is now at positioin 1 3 N');
