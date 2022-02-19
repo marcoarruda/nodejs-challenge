@@ -62,7 +62,8 @@ class MarsExploration {
   }
 
   getRoverPositionMessage(roverId) {
-
+    const rover = this.rovers.find(r => r.id === roverId)
+    return `Rover "${rover.name}" is now at position ${rover.positionX} ${rover.positionY} ${rover.orientation}`
   }
 }
 
