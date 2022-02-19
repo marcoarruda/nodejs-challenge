@@ -22,9 +22,10 @@ test('Land Rover on Mars', () => {
   });
 });
 
-test('Move Rover on Plateau', () => {
+test('Move Rover on Plateau - Scenario 1', () => {
   const exploration = new MarsExploration();
-  const position = exploration.moveRover(1, 'LMLMLMLMM');
+  const rover = exploration.landRover(1, 'Eagle', '1 2 N'); // land rover before trying to move it
+  const position = exploration.moveRover(1, 'LMLMLMLMM'); // we now have something to move
   expect(position).toStrictEqual({
     newPositionX: 1,
     newPositionY: 3,
