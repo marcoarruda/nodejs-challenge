@@ -1,6 +1,6 @@
-const MarsExplorastion = require('./src/MarsExploration');
+const MarsExploration = require('./src/MarsExploration');
 
-const exploration1 = new MarsExplorastion();
+const exploration1 = new MarsExploration();
 exploration1.definePlateauSize('North Plateau', '10,10');
 exploration1.landRover(1, 'Eagle', '1 2 N');
 exploration1.landRover(2, 'Falcon', '3 3 E');
