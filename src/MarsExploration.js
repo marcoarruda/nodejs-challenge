@@ -32,11 +32,16 @@ class MarsExploration {
     const rover = this.rovers.find(r => r.id === roverId)
     // define movements result
     const toTheLeft = { N: 'W', E: 'N', S: 'E', W: 'S' }
+    const toTheRight = { N: 'E', E: 'S', S: 'W', W: 'N' }
     // handle movement cases
     for (let command of commands) {
       switch (command) {
         case 'L':
           rover.orientation = toTheLeft[rover.orientation]
+          break
+        case 'R':
+          rover.orientation = toTheRight[rover.orientation]
+          break
       }
     }
 
