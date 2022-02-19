@@ -33,6 +33,17 @@ test('Move Rover on Plateau - Scenario 1', () => {
   });
 });
 
+test('Move Rover on Plateau - Scenario 2', () => {
+  const exploration = new MarsExploration();
+  const rover = exploration.landRover(1, 'Eagle', '3 3 E');
+  const position = exploration.moveRover(1, 'MRRMMRMRRM');
+  expect(position).toStrictEqual({
+    newPositionX: 2,
+    newPositionY: 3,
+    newOrientation: 'S'
+  });
+});
+
 test('Print Rover Position', () => {
   const exploration = new MarsExploration();
   const rover = exploration.landRover(1, 'Eagle', '1 3 N'); // land rover before trying to move it
