@@ -24,6 +24,7 @@ test('Land Rover on Mars', () => {
 
 test('Move Rover on Plateau - Scenario 1', () => {
   const exploration = new MarsExploration();
+  exploration.definePlateauSize('plateau', '10,10')
   const rover = exploration.landRover(1, 'Eagle', '1 2 N'); // land rover before trying to move it
   const position = exploration.moveRover(1, 'LMLMLMLMM'); // we now have something to move
   expect(position).toStrictEqual({
@@ -35,6 +36,7 @@ test('Move Rover on Plateau - Scenario 1', () => {
 
 test('Move Rover on Plateau - Scenario 2', () => {
   const exploration = new MarsExploration();
+  exploration.definePlateauSize('plateau', '10,10')
   const rover = exploration.landRover(1, 'Eagle', '3 3 E');
   const position = exploration.moveRover(1, 'MRRMMRMRRM');
   expect(position).toStrictEqual({
