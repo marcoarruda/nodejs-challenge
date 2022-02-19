@@ -2,6 +2,7 @@ class MarsExploration {
 
   constructor() {
     this.rovers = []
+    this.plateau = null
   }
 
   definePlateauSize(name, upperRightCoordinates) {
@@ -11,6 +12,7 @@ class MarsExploration {
       upperX,
       upperY
     }
+    this.plateau = plateau
     return plateau
   }
 
@@ -47,8 +49,14 @@ class MarsExploration {
           rover.orientation = toTheRight[rover.orientation]
           break
         case 'M':
-          rover.positionX += goStraightAheadX[rover.orientation]
-          rover.positionY += goStraightAheadY[rover.orientation]
+          const newPositionX = rover.positionX + goStraightAheadX[rover.orientation]
+          if (newPositionX <= this.plateau.upperX || newPositionX >= 0) {
+            rover.positionX = newPositionX
+          }
+          const newPositionY = rover.positionY + goStraightAheadY[rover.orientation]
+          if (newPositionY <= this.plateau.upperY || newPositionY >= 0) {
+            rover.positionY = newPositionY
+          }
           break
       }
     }
